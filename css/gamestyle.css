@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #085438; /*color of the 'floor' essentially*/
+
+    margin: 0; /*removes default margin*/
+    padding: 0; /*removes default padding*/
+
+    display: flex; /*flex for centering stuff*/
+    flex-direction: column; /*elements in body stacked vertically*/
+
+    align-items: center; /*centers items horizontally*/
+    justify-content: center; /*centers items vertically*/
+    height: 100vh; /*full height of the viewport*/
+}
+
+.table {
+    display: flex; /*flexbox for positioning child elements*/
+    position: relative;
+
+    width: 80%; /*table takes 80% of the screen width*/
+    max-width: 1100px; /*maximum width for larger screens*/
+    height: 600px; /*fixed height*/
+
+    background: green;
+    border: 10px ridge rgb(128, 86, 58);
+    border-radius: 1px;
+
+    overflow: hidden; /*items that overflow over table div will be cutoff*/
+}
+
+.button-container {
+    display: flex;
+    justify-content: center; /*centers buttons vertically*/
+
+}
