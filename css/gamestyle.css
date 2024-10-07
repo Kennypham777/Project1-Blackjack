@@ -31,5 +31,5 @@ body {
 .button-container {
     display: flex;
     justify-content: center; /*centers buttons vertically*/
-
+    margin-top: 20px; /*margin between table and buttons*/
 }
