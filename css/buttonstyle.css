@@ -1,0 +1,18 @@
+.button {
+    background-color: #4CAF50; /*button color*/
+    color: white; /*text color*/
+
+    border: none; /*no border*/
+    border-radius: 5px; /*rounded corners*/
+    padding: 10px 20px; /*padding for text inside*/
+    margin: 0 10px; /*spacing between each button*/
+
+    cursor: pointer; /*turn cursor to pointer on hover*/
+    transition: background-color 0.2s; /*smooth transition for hover effect*/
+}
+.button:hover {
+    background-color: #318a36; /*darker green color on hover*/
+}
+.button:active {
+    background-color: #1b5730; /* even darker green for when the button is pressed */
+}
