@@ -21,7 +21,7 @@ body {
     max-width: 1100px; /*maximum width for larger screens*/
     height: 600px; /*fixed height*/
 
-    background: linear-gradient(to bottom, rgb(42, 191, 42), forestgreen); /*bg color gradient*/
+    background: linear-gradient(to bottom, rgb(46, 208, 46), forestgreen); /*bg color gradient*/
     border: 10px ridge rgb(128, 86, 58);
     border-radius: 1px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /*shadow to simulate table height*/
@@ -33,4 +33,52 @@ body {
     display: flex;
     justify-content: center; /*centers buttons vertically*/
     margin-top: 20px; /*margin between table and buttons*/
+}
+
+.bet-area {
+    display: flex; 
+    justify-content: center; /*center stuff inside horizontally*/
+    align-items: center; /*center stuff inside vertically*/
+    text-align: center;
+    overflow: hidden;
+
+    width: 60px; /*sizing*/
+    height: 60px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75); /*text color*/
+    font-size: 10pt;
+
+    position: absolute; /*below settings puts it at the center bottom ish of the table*/
+    bottom: 10%;
+    left: 50%;
+
+    transform: translateX(-50%); /*keeps the center point to be in the center for positioning*/
+    border: 2px dashed rgba(255, 255, 255, 0.5); /*dashed border for clarity*/
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.card-area {
+    display: flex; 
+    justify-content: center; /*center stuff inside horizontally*/
+    align-items: center; /*center stuff inside vertically*/
+    text-align: center;
+    overflow: hidden;
+
+    width: 75px; /*sizing*/
+    height: 105px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.75); /*text color*/
+    font-size: 10pt;
+
+    position: absolute; /*below settings puts it at the center bottom ish of the table*/
+    bottom: 23%;
+    left: 50%;
+
+    transform: translateX(-50%); /*keeps the center point to be in the center for positioning*/
+    border: 2px dashed rgba(255, 255, 255, 0.5); /*dashed border for clarity*/
+    border-radius: 5%;
+    z-index: 1;
 }
