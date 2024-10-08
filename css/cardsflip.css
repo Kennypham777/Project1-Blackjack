@@ -1,0 +1,66 @@
+.card-container {
+    position: relative; /* position for card within */
+    width: 75px; 
+    height: 105px;
+    margin: 0 -10px; /* adjust margin for stacking */
+}
+
+.card {
+    width: 75px; 
+    height: 105px;
+    position: relative; /* 3d tranformation */
+    transition: transform 0.6s; /* flip animation */
+    transform-style: preserve-3d; /* ensures both sides are preserved */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transform: rotateY(180deg); /* initially face down */
+    z-index: 2; /* adjust higher than card-container*/
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 75px; 
+    height: 105px;
+    backface-visibility: hidden; /* hide back when font is visible */
+    display: flex;
+}
+/*card 1*/
+.card-font-design{
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/ace.png'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+/* card 2 */
+.card-font-design2{
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/seven.png'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+/* dealer card */
+.card-font-design-dealer{
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/king.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+/* back of card */
+.card-back-design {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/backcards.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+.card-back {
+    transform: rotateY(180deg); /* back of card face up */
+}
+/* flip the card on hover */
+.card-container:hover .card {
+    transform: rotateY(0deg); /* flip font */
+}
+
