@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/gamestyle.css"> <!-- Links to external CSS file -->
     <link rel="stylesheet" href="css/buttonstyle.css">
     <link rel="stylesheet" href="css/chipstyle.css">
+    <link rel="stylesheet" href="css/cardsflip.css">
 </head>
 <body>
     <div class="table">
@@ -29,10 +30,55 @@
 
         <!--bet area for chips-->
         <div class="bet-area">Chips Betted</div>
-        <div class="card-area">Player's cards</div>
-        <div class="card-area" style="bottom: 75%;">Dealer's cards</div>
+        <!--Cards area-->
+        <!--player cards-->
+        <div class="card-area">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-back">
+                        <div class="card-back-design"></div>   
+                    </div>
+                    <div class="card-font">
+                        <div class="card-font-design"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container" style="margin-top: -12px;"> <!--stacking-->
+                <div class="card">
+                    <div class="card-back">
+                        <div class="card-back-design"></div>   
+                    </div>
+                    <div class="card-front">
+                        <div class="card-font-design2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--dealer cards-->
+        <div class="card-area" style="bottom: 75%;">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-back">
+                        <div class="card-back-design"></div>   
+                    </div>
+                    <div class="card-font">
+                        <div class="card-font-design-dealer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-container" style="margin-top: -12px;"> <!--stacking-->
+                <div class="card">
+                    <div class="card-back">
+                        <div class="card-back-design"></div>   
+                    </div>
+                    <div class="card-front">
+                        <div class="card-font-design-dealer"></div>
+                    </div>
+                </div>
+            </div>
+        </div> 
 
-        
+
     </div>
 
     <div class="button-container">
