@@ -66,19 +66,14 @@ body {
     text-align: center;
     overflow: hidden;
 
-    width: 75px; /*sizing*/
-    height: 105px;
+    width: 150px; /*sizing*/
+    height: 110px; /* changed sizing */
 
-    background-color: rgba(255, 255, 255, 0.1);
-    color: rgba(255, 255, 255, 0.75); /*text color*/
-    font-size: 10pt;
-
+    /* removed background stuff */
     position: absolute; /*below settings puts it at the center bottom ish of the table*/
-    bottom: 23%;
+    bottom: 24%;
     left: 50%;
 
     transform: translateX(-50%); /*keeps the center point to be in the center for positioning*/
-    border: 2px dashed rgba(255, 255, 255, 0.5); /*dashed border for clarity*/
-    border-radius: 5%;
     z-index: 1;
 }
