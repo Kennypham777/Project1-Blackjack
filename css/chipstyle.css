@@ -1,0 +1,70 @@
+.chip { /*actual chips for game, will appear after falling animation*/
+    display: flex;
+    justify-content: center; /*center things in chip to be center horizontally*/
+    align-items: center; /*same as above but for vertically*/
+
+    width: 23px; /*sizing*/
+    height: 23px;
+
+    background-color: #ffffff; /*chip center color*/
+    border: 7px solid #DAA520; /*chip border color (can be adjusted via inline)*/
+    border-radius: 50%; /*make it round*/
+    font-size: 10pt;
+
+    cursor: pointer;
+    position: absolute; /*position for free movement*/
+    
+    opacity: 0; /*start out hidden, will appear after animation*/
+    animation: fade-in 2.5s forwards; /*2.5 is delay duration*/
+    transition: transform 0.2s; /*smooth transition for animation*/
+    overflow: hidden; 
+    z-index: 3;
+}
+.chip:hover {
+    transform: scale(1.1) translate(0px, -10px);
+    box-shadow: 5px 5px 10px black;
+    z-index: 4;
+}
+@keyframes fade-in {
+    0% {
+        opacity: 0; /*start invisible*/
+    }
+    99% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /*end fully visible*/
+    }
+}
+
+.chip-anim { /*this is for chips falling in on gamepage load*/
+    display: flex;
+    justify-content: center; /*center things in chip to be center horizontally*/
+    align-items: center; /*same as above but for vertically*/
+
+    width: 23px; /*sizing*/
+    height: 23px;
+
+    background-color: #ffffff; /*chip center color*/
+    border: 7px solid #DAA520; /*chip border color (can be adjusted via inline)*/
+    border-radius: 50%; /*make it round*/
+    font-size: 10pt;
+
+    position: absolute; /*position for free movement*/
+    
+    animation: chip-fall 1s ease-out forwards;
+    opacity: 0;
+    transition: transform 0.2s; /*smooth transition for animation*/
+    overflow: hidden;
+    z-index: 2;
+}
+@keyframes chip-fall {
+    0% {
+        transform: scale(2) translate(-200px, -200px); /*start larger and off to the top-left*/
+        opacity: 0; /*start invisible*/
+    }
+    100% {
+        transform: scale(1) translate(0, 0); /* End at normal size and position */
+        opacity: 1; /*fade in*/
+    }
+}
