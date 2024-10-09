@@ -20,7 +20,6 @@ body {
     border: 2px solid beige;
     border-radius: 15px;
     background-color: beige;
-    opacity: 0.8;
     padding: 20px;
     text-align: center;
 }
@@ -33,6 +32,7 @@ h1 {
 }
 p{
     color: green;
+    text-shadow: 2px 0px 2px black;
 }
 .step {
     font-size: 25px;
@@ -45,6 +45,9 @@ p{
 
 .button {
     margin-top: 20px; 
+}
+.inner-rule{
+    opacity: 1;
 }
 
 
