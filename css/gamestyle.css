@@ -77,3 +77,77 @@ body {
     transform: translateX(-50%); /*keeps the center point to be in the center for positioning*/
     z-index: 1;
 }
+.chip-container {
+    display: flex;
+    justify-content: center; 
+    position: absolute;
+    right: 20%; /* move container to the right side*/
+    top: 5%; /* container from top */
+    height: 90px;
+    width: 100px;
+    padding: 20px; 
+}
+/* create shadow and box for chip set */
+.chip-set {
+    border: 3px solid black;
+    border-radius: 15px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5); 
+}
+/* deck container area */
+.deck-area {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    padding: 20px;
+    height: 140px;
+    width: 105px;
+    left: 20%; 
+    top: 5%;
+}
+
+/* Card stack - contains all deck images */
+.card-stack {
+    position: relative; /* to position deck cards relative to this container */
+    width: 100%; 
+    height: 100%; 
+}
+
+/* Individual deck card */
+.deck {
+    position: absolute; /* stacks the cards on top of each other */
+    width: 100%; 
+    height: 100%; 
+    border-radius: 15px; 
+}
+
+/* Top card (image) */
+.deck:first-child {
+    z-index: 3; /* top */
+    transform: translate(0px, 0px); /* no offset */
+    border: 4px solid white; 
+}
+
+/* Middle card (border only) */
+.middle-border {
+    z-index: 2; /* middle */
+    transform: translate(3px, 3px); /* offset to the right and down */
+    border: 4px solid lightgray; /* fight gray border for middle card */
+    background-color: transparent; /* background transparent */
+    border-radius: 15px;
+    width: 100%;
+    height: 100%; 
+}
+
+/* Bottom card (border only) */
+.bottom-border {
+    z-index: 1; /* bottom */
+    transform: translate(5px, 5px); /* further offset */
+    border: 4px solid lightslategray; 
+    background-color: transparent; 
+    border-radius: 15px; 
+    width: 100%; 
+    height: 100%; 
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.5); /* shadow under the deck */
+
+}
+
