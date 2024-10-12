@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/buttonstyle.css">
     <link rel="stylesheet" href="css/chipstyle.css">
     <link rel="stylesheet" href="css/cardsflip.css">
+    <link rel="stylesheet" href="css/cardshuffle.css">
+    <link rel="stylesheet" href="css/carddealing.css">
 </head>
 <body>
     <div class="table">
@@ -36,20 +38,20 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-back">
-                        <div class="card-back-design"></div>   
+                        <div class="card-front-design"></div>   
                     </div>
                     <div class="card-font">
-                        <div class="card-font-design"></div>
+                        <div class="card-back-design"></div>
                     </div>
                 </div>
             </div>
-            <div class="card-container" style="margin-top: -12px;"> <!--stacking-->
+            <div class="card-container" style="margin-top: -5px;"> <!--stacking-->
                 <div class="card">
                     <div class="card-back">
-                        <div class="card-back-design"></div>   
+                        <div class="card-front-design2"></div>   
                     </div>
                     <div class="card-front">
-                        <div class="card-font-design2"></div>
+                        <div class="card-back-design2"></div>
                     </div>
                 </div>
             </div>
@@ -59,24 +61,24 @@
             <div class="card-container">
                 <div class="card">
                     <div class="card-back">
-                        <div class="card-back-design"></div>   
+                        <div class="card-front-design3"></div>
                     </div>
                     <div class="card-font">
-                        <div class="card-font-design-dealer"></div>
+                        <div class="card-back-design-dealer"></div>
                     </div>
                 </div>
             </div>
-            <div class="card-container" style="margin-top: -12px;"> <!--stacking-->
+            <div class="card-container2" style="margin-top: -5px;"> <!--stacking-->
                 <div class="card">
                     <div class="card-back">
-                        <div class="card-back-design"></div>   
+                        <div class="card-front-design4"></div>
                     </div>
                     <div class="card-front">
-                        <div class="card-font-design-dealer"></div>
+                        <div class="card-back-design-dealer2"></div>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
         <!--Chip area-->
         <div class="chip-container">
             <img  class="chip-set" src="assets/chipset.jpg" alt="chip set">
@@ -84,13 +86,16 @@
          <!--deck of cards-->
          <div class="deck-area">
             <div class="card-stack">
-                <img class="deck" src="assets/backcards.jpg" alt="card1"> <!-- Top card -->
-                <div class="deck middle-border"></div> <!-- Middle border -->
-                <div class="deck bottom-border"></div> <!-- Bottom border -->
-            </div>     
+                <div class="card top-card move-card"></div> <!-- Add the class here to move the card -->
+                <div class="card middle-card"></div>
+                <div class="card bottom-card"></div>
+            </div>
         </div>
-        
-    
+        <div class="card-anim2" style="top: 93%; left: 42%; animation-delay: 4s;"></div>
+        <div class="card-anim" style="top: 92%; left: 42%; animation-delay: 4s;"></div>
+        <div class="card-anim3" style="top: 93%; left: 42%; animation-delay: 4s;"></div>
+        <div class="card-anim4" style="top: 92%; left: 42%; animation-delay: 4s;"></div>
+        </div>
     </div>
    
     <div class="button-container">

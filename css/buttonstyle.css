@@ -66,16 +66,16 @@
 /* For positioning the hands and the x2*/
 .hit-hand {
     left: 49%;
-    top: 50%;
+    top: 45%;
 }
 .stand-hand {
     left: 49%;
-    top: 48%;
+    top: 42%;
 }
 .split-hand {
     width: 70px;
     left: 49%;
-    top: 52%;
+    top: 42%;
 }
 .double {
     color: white;

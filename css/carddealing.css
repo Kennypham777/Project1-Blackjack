@@ -1,0 +1,208 @@
+.deck-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    padding: 20px;
+    height: 140px;
+    width: 105px;
+}
+
+.card-stack {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 1;
+    transition: transform 0.5s, z-index 0s 0.5s; 
+}
+
+
+.top-card {
+    background-image: url("../assets/backcards.jpg");
+    background-size: cover;
+    animation: shuffle 3s forwards; 
+}
+
+
+.card-anim2 { 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-image: url("../assets/ace.png"); /* Background image for the Ace card */
+    background-size: cover;/* Ensure image covers the card */
+    width: 75px; /* Set fixed width */
+    height: 105px;/* Set fixed height */
+    border-radius: 10px;  /* Round corners */
+    position: absolute; 
+    opacity: 0; /* Start invisible */
+    transition: transform 0.2s; 
+    overflow: hidden;
+    z-index: 2;
+    animation: card2 2s ease-out forwards; /* Animation for Ace card */
+    animation-fill-mode: backwards; /* Starts animation from initial state */
+}
+
+.card-anim { 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-image: url("../assets/seven.png");
+    background-size: cover;
+    width: 75px; 
+    height: 105px;
+    border-radius: 10px;
+    position: relative; 
+    opacity: 0;
+    transition: transform 0.2s; 
+    overflow: hidden;
+    z-index: 2;
+    animation: card 3s ease-out forwards;
+    animation-fill-mode: backwards; 
+
+}
+
+
+.card-anim3 { 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    background-image: url("../assets/king.jpg");
+    background-size: cover;
+    width: 75px; 
+    height: 105px;
+    border-radius: 10px;
+    position: absolute; 
+    opacity: 0;
+    transition: transform 0.2s;
+    overflow: hidden;
+    z-index: 2;
+    animation: card3 2s ease-out forwards;
+    animation-fill-mode: backwards; 
+}
+
+.card-anim4 { 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-image: url("../assets/backcards.jpg");
+    background-size: cover;
+    width: 75px; 
+    height: 105px;
+    border-radius: 10px;
+    position: relative; 
+    opacity: 0;
+    transition: transform 0.2s; 
+    overflow: hidden;
+    z-index: 2;
+    animation: card4 3s ease-out forwards;
+    animation-fill-mode: backwards; 
+
+}
+
+
+
+/* Keyframe animation for Ace card */
+@keyframes card2 {
+    0% {
+        transform: scale(1) translate(-170px, -480px); 
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        transform: scale(1) translate(23px, -210px); 
+        opacity: 1; 
+    }
+    60% {
+        transform: scale(1) translate(23px, -210px); 
+        opacity: 1; 
+    }
+    80% {
+        transform: scale(1) translate(23px, -210px); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1) translate(23px, -210px); 
+        opacity: 1; 
+    }
+}
+
+
+/* Keyframe animation for Seven card */
+@keyframes card {
+    0% {
+        transform: scale(1) translate(-170px, -480px); 
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        transform: scale(1) translate(78px, -206px); 
+        opacity: 1; 
+    }
+    60% {
+        transform: scale(1) translate(78px, -206px); 
+        opacity: 1; 
+    }
+    80% {
+        transform: scale(1) translate(78px, -206px); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1) translate(78px, -206px); 
+        opacity: 1;   
+}
+}
+
+
+/* Keyframe animation for King card */
+@keyframes card3 {
+    0% {
+        transform: scale(1) translate(-170px, -480px); 
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        transform: scale(1) translate(23px, -516px); 
+        opacity: 1; 
+    }
+    60% {
+        transform: scale(1) translate(23px, -516px); 
+        opacity: 1; 
+    }
+    80% {
+        transform: scale(1) translate(23px, -516px); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1) translate(23px, -516px); 
+        opacity: 1;
+    }
+}
+
+
+/* Keyframe animation for card back */
+@keyframes card4 {
+    0% {
+        transform: scale(1) translate(-170px, -480px); 
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        transform: scale(1) translate(3px, -512px); 
+        opacity: 1; 
+    }
+    60% {
+        transform: scale(1) translate(3px, -512px); 
+        opacity: 1; 
+    }
+    80% {
+        transform: scale(1) translate(3px, -512px); 
+        opacity: 1; 
+    }
+    100% {
+        transform: scale(1) translate(3px, -512px);
+        opacity: 1;    
+}
+}
