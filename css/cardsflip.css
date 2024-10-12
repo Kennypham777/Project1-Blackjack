@@ -3,52 +3,50 @@
     width: 75px; 
     height: 105px;
     margin: 0 -10px; /* adjust margin for stacking */
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Prevents interaction */
+    animation: showCard 6s forwards; /* Animation to show the card */
+}
+
+@keyframes showCard {
+    0% {
+        opacity: 0; /* Fully transparent */
+        visibility: hidden; /* Hidden */
+        z-index: 0; /* Start with a low z-index */
+    }
+    99% {
+        opacity: 0; /* Still fully transparent */
+        z-index: 0; /* Remain behind */
+    }
+    100% {
+        opacity: 1; /* Fully visible */
+        visibility: visible; /* Now visible */
+        z-index: 1000; /* High z-index to ensure it is on top */
+    }
 }
 
 .card {
     width: 75px; 
     height: 105px;
-    position: relative; /* 3d tranformation */
-    transition: transform 0.6s; /* flip animation */
+    position: relative; /* 3D transformation */
+    transition: transform 0.6s; /* Flip animation */
     transform-style: preserve-3d; /* ensures both sides are preserved */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
     transform: rotateY(180deg); /* initially face down */
     z-index: 2; /* adjust higher than card-container*/
 }
+
 
 .card-front, .card-back {
     position: absolute;
     width: 75px; 
     height: 105px;
-    backface-visibility: hidden; /* hide back when font is visible */
+    backface-visibility: hidden; /* hide back when front is visible */
     display: flex;
 }
-/*card 1*/
-.card-font-design{
-    width: 75px; 
-    height: 105px;
-    background-image: url('../assets/ace.png'); 
-    background-size: cover;
-    border-radius: 10px; 
-}
-/* card 2 */
-.card-font-design2{
-    width: 75px; 
-    height: 105px;
-    background-image: url('../assets/seven.png'); 
-    background-size: cover;
-    border-radius: 10px; 
-}
-/* dealer card */
-.card-font-design-dealer{
-    width: 75px; 
-    height: 105px;
-    background-image: url('../assets/king.jpg'); 
-    background-size: cover;
-    border-radius: 10px; 
-}
-/* back of card */
+
+/* Styles for card backs */
 .card-back-design {
     width: 75px; 
     height: 105px;
@@ -56,11 +54,96 @@
     background-size: cover;
     border-radius: 10px; 
 }
+
+.card-back-design2 {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/backcards.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+/* Styles for card fronts */
+
+.card-front-design {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/ace.png'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+.card-front-design2 {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/seven.png'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+
+/* Styles for dealer card backs */
+.card-back-design-dealer {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/backcards.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+
+.card-back-design-dealer2 {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/backcards.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+
+/* Styles for dealer card fronts */
+
+.card-front-design3 {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/king.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+
+.card-front-design4 {
+    width: 75px; 
+    height: 105px;
+    background-image: url('../assets/backcards.jpg'); 
+    background-size: cover;
+    border-radius: 10px; 
+}
+
+
+/* dealer card that isnt shown to player*/
+
+.card-container2 {
+    position: relative; /* position for card within */
+    width: 75px; 
+    height: 105px;
+    margin: 0 -10px; /* adjust margin for stacking */
+    opacity: 0; /* Start hidden */
+    visibility: hidden; /* Prevents interaction */
+    animation: showCard 6s forwards; /* Animation to show the card */
+}
+
+
+
+
+
+
 .card-back {
     transform: rotateY(180deg); /* back of card face up */
 }
-/* flip the card on hover */
+
 .card-container:hover .card {
-    transform: rotateY(0deg); /* flip font */
+    transform: rotateY(0deg); /* flip front */
 }
+
 
